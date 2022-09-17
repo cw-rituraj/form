@@ -87,7 +87,7 @@ togglePassword.addEventListener("click", (e) => {
 submit.addEventListener("click", (e) => {
   e.preventDefault();
   if (check()) {
+     location.reload();
     alert("You are signed up.");
-    location.reload();
   }
 });
