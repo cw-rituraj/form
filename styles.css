@@ -87,8 +87,36 @@ button {
   border-radius: 5px;
 }
 
+.signup-popup {
+  background: white;
+  max-width: 30vw;
+  min-width: 400px;
+  height: 300px;
+  text-align: center;
+  padding: 20px;
+  display: none;;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  border-radius: 15px;
+  color: green;
+  z-index: 2;
+  position: absolute;
+}
+
+.close {
+  position: absolute;
+  top:15px;
+  right:15px;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 430px) {
   .form-container {
     width: 90vw;
+  }
+  .signup-popup {
+    max-width: 70vw;
+    min-width: 70vw;
   }
 }
