@@ -4,13 +4,14 @@ const password = document.querySelector("#password");
 const confirmpassword = document.querySelector("#confirm-password");
 const submit = document.querySelector("#submit");
 const togglePassword = document.querySelector("#togglePassword");
-
+const signup_popup = document.querySelector(".signup-popup");
+const form = document.querySelector(".form-container");
+const closed = document.querySelector(".close");
 
 const usernamemsg = document.querySelector("#nameerrormsg");
 const passwordmsg = document.querySelector("#passworderrormsg");
 const confirmpasswordmsg = document.querySelector("#cpassworderrormsg");
 const emailmsg = document.querySelector("#emailerrormsg");
-
 
 const check = () => {
   let isValid = true;
@@ -67,7 +68,6 @@ const validatePassword = (password) => {
   );
 };
 
-
 togglePassword.addEventListener("click", (e) => {
   if (
     togglePassword.attributes.src.nodeValue ==
@@ -83,11 +83,16 @@ togglePassword.addEventListener("click", (e) => {
   }
 });
 
-
 submit.addEventListener("click", (e) => {
   e.preventDefault();
   if (check()) {
-     location.reload();
-    alert("You are signed up.");
+    signup_popup.style.display = "flex";
+    form.style.opacity = "0.5";
+    // alert("You are signed up.");
   }
+});
+
+closed.addEventListener("click", (e) => {
+  signup_popup.style.display = "none";
+  location.reload();
 });
