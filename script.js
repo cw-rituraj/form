@@ -48,7 +48,7 @@ const check = () => {
     confirmpasswordmsg.style.display = "inline";
     confirmpassword.setAttribute("id", "wrong");
     isValid = false;
-  } else if (password.value != confirmpassword.value) {
+  } else if (password.value == confirmpassword.value) {
     confirmpasswordmsg.style.display = "none";
     confirmpassword.setAttribute("id", "right");
   }
